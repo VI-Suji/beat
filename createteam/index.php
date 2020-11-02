@@ -8,7 +8,6 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let players = ".json_encode($results)."</script>";
 
 ?>
-<script>console.log(players)</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -207,7 +206,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cta">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>

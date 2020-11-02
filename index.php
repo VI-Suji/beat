@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('config.php');
@@ -15,11 +14,11 @@ $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
-$_SESSION['alogin']=$_POST['user'];
+// $_SESSION['alogin']=$_POST['user'];
 echo "<script type='text/javascript'> document.location = 'index/index.php'; </script>";
 } else{
   
-  echo "<script>alert('Invalid Details'); document.location = 'login.php'; </script>";
+  echo "<script>alert('Invalid Details'); document.location = 'index.php'; </script>";
 
 }
 
@@ -35,7 +34,7 @@ echo "<script type='text/javascript'> document.location = 'index/index.php'; </s
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> ISTE- Beat The Game</title>
-  <link rel="stylesheet" href="stylelogin.css">
+  <!-- <link rel="stylesheet" href="stylelogin.css"> -->
   <link rel="stylesheet" a href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
