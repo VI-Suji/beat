@@ -19,7 +19,7 @@ $_SESSION['alogin']=$_POST['user'];
 echo "<script type='text/javascript'> document.location = 'index/index.php'; </script>";
 } else{
   
-  echo "<script>alert('Invalid Details'); document.location = 'login.php'; </script>";
+  echo "<script>alert('Invalid Details'); document.location = 'index.php'; </script>";
 
 }
 
