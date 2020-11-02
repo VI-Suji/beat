@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 02, 2020 at 03:53 PM
+-- Generation Time: Nov 02, 2020 at 04:27 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -160,7 +160,35 @@ CREATE TABLE `userlogin` (
 --
 
 INSERT INTO `userlogin` (`id`, `useremail`, `password`) VALUES
-(1, '180112@tkmce.ac.in', 'Sujith');
+(1, '180112@tkmce.ac.in', 'Sujith'),
+(2, '180639@tkmce.ac.in', '180639@tkmce.ac.in'),
+(3, '180909@tkmce.ac.in', '180909@tkmce.ac.in'),
+(4, '190978@tkmce.ac.in', '190978@tkmce.ac.in'),
+(5, '190465@tkmce.ac.in', '190465@tkmce.ac.in'),
+(6, '190041@tkmce.ac.in', '190041@tkmce.ac.in'),
+(7, '190878@tkmce.ac.in', '190878@tkmce.ac.in'),
+(8, '190793@tkmce.ac.in', '190793@tkmce.ac.in'),
+(9, '190126@tkmce.ac.in', '190126@tkmce.ac.in'),
+(10, '180785@tkmce.ac.in', '180785@tkmce.ac.in'),
+(11, '190976@tkmce.ac.in', '190976@tkmce.ac.in'),
+(12, '190546@tkmce.ac.in', '190546@tkmce.ac.in'),
+(13, '181013@tkmce.ac.in', '181013@tkmce.ac.in'),
+(14, '190261@tkmce.ac.in', '190261@tkmce.ac.in'),
+(15, '190824@tkmce.ac.in', '190824@tkmce.ac.in'),
+(16, '180398@tkmce.ac.in', '180398@tkmce.ac.in'),
+(17, '190444@tkmce.ac.in', '190444@tkmce.ac.in'),
+(18, '180883@tkmce.ac.in', '180883@tkmce.ac.in'),
+(19, '190954@tkmce.ac.in', '190954@tkmce.ac.in'),
+(20, '190877@tkmce.ac.in', '190877@tkmce.ac.in'),
+(21, '190851@tkmce.ac.in', '190851@tkmce.ac.in'),
+(22, '190907@tkmce.ac.in', '190907@tkmce.ac.in'),
+(23, '181003@tkmce.ac.in', '181003@tkmce.ac.in'),
+(24, '180471@tkmce.ac.in', '180471@tkmce.ac.in'),
+(25, '190048@tkmce.ac.in', '190048@tkmce.ac.in'),
+(26, '190386@tkmce.ac.in', '190386@tkmce.ac.in'),
+(27, '170946@tkmce.ac.in', '170946@tkmce.ac.in'),
+(28, '180026@tkmce.ac.in', '180026@tkmce.ac.in'),
+(29, '190609@tkmce.ac.in', '190609@tkmce.ac.in');
 
 --
 -- Indexes for dumped tables
@@ -216,7 +244,7 @@ ALTER TABLE `toppers`
 -- AUTO_INCREMENT for table `userlogin`
 --
 ALTER TABLE `userlogin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

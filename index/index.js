@@ -15,7 +15,7 @@ var hor = dt.getHours();
 document.getElementById("match1-team1").style.backgroundImage = "url('dc.png')";
 
 document.getElementById("match1-team2").style.backgroundImage =
-  "url('test.webp')";
+  "url('RCB.jpg')";
 
 document.getElementById("match2-team1").style.backgroundImage =
   "url('test.webp')";
