@@ -16,7 +16,7 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
 $_SESSION['alogin']=$_POST['user'];
-echo "<script type='text/javascript'> alert('hello Details');  document.location = 'index/index.php'; </script>";
+echo "<script type='text/javascript'> document.location = 'index/index.php'; </script>";
 } else{
   
   echo "<script>alert('Invalid Details'); document.location = 'index.php'; </script>";
