@@ -14,7 +14,7 @@ $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
-// $_SESSION['alogin']=$_POST['user'];
+$_SESSION['alogin']=$_POST['user'];
 echo "<script type='text/javascript'> document.location = 'index/index.php'; </script>";
 } else{
   

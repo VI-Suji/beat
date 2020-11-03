@@ -7,8 +7,18 @@ if(!$jdata || count($jdata)!=11){
     echo "11 Players Not Selected";
     return;
 }
-$score = 0;
 $email = $_SESSION['alogin'];
+$sql ="SELECT * FROM myteam WHERE useremail=:email";
+$query= $dbh -> prepare($sql);
+$query-> bindParam(':email', $email, PDO::PARAM_STR);
+$query-> execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+if($query->rowCount() > 0)
+{
+    echo "Sorry already submitted ";
+    return;
+}else{
+$score = 0;
 // $email="test";
 $sql ="INSERT INTO `myteam` ( `useremail`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `p7`, `p8`, `p9`, `p10`, `p11`, `tscore`) VALUES (:email, :p1,:p2,:p3,:p4,:p5,:p6,:p7,:p8,:p9,:p10,:p11,:score)";
 $query= $dbh -> prepare($sql);
@@ -37,6 +47,7 @@ if($lastInsertId)
 else
 {
     echo "Something went wrong. Please fill and try again";
+}
 }
 
 ?>
