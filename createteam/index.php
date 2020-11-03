@@ -418,7 +418,15 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
         <script>
         function check(){
-        return wkNo >= 1 && wkNo < 4 && batNo >= 3 && batNo < 6 && arNo >= 1 && arNo < 4 && bowlNo >= 3 && bowlNo < 6 ? true : false;
+            if(!(wkNo >= 1 && wkNo < 4 && arNo >= 1 && arNo < 4)){
+                alert("Not enough players selected select atleast 1 and atmost 4 keepers and all rounders from each");
+                return false;
+            }else if(!(batNo >= 3 && batNo < 6 && bowlNo >= 3 && bowlNo < 6)){
+                alert("Not enough players selected select atleast 3 and atmost 6 batsmen and bowlers from each");
+                return false;
+            }else{
+                return true;
+            }
         }
 
         function saveteam(){
@@ -430,8 +438,6 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 function(data, status){
                     alert(data);
             });
-        }else{
-            alert("Not enough players selected select atleast 2 and atmost 4 players from each");
         }
 
 
