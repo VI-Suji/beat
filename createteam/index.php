@@ -13,9 +13,6 @@ $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let players = ".json_encode($results)."</script>";
 ?>
-<script>
-    console.log(players);
-</script>
 
 
 <html>
