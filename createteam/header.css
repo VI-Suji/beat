@@ -51,7 +51,7 @@ img:hover {
   text-shadow: 0 0 30px #457b9d;
 }
 
-div.item {
+.item {
   vertical-align: top;
   display: inline-block;
   text-align: center;

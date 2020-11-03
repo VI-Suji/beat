@@ -1,5 +1,5 @@
 <?php 
-// define('DB_HOST','istetkmce.online');
+// define('DB_HOST','istetkmce.in');
 // define('DB_USER','ezitmxze_admin');
 // define('DB_PASS','Istetkmce@2019');
 // define('DB_NAME','ezitmxze_beat');

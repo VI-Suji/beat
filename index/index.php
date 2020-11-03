@@ -1,3 +1,13 @@
+<?php
+session_start();
+error_reporting(0);
+if(strlen($_SESSION['alogin'])==0)
+	{	
+header('location:../index.php');
+}
+else{
+
+  ?>
 
 <!DOCTYPE html>
 
@@ -83,13 +93,13 @@
                 <a class="nav-link" href="#">LeaderBoard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="../about/index.php">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../index.php">Logout</a>
+                <a class="nav-link" href="../logout.php">Logout</a>
             </li>
         </ul>
     </div>
@@ -121,7 +131,7 @@
           <div class="row">
           
             <div class="col-4">
-            <a href="../createteam/index.php"><img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
+            <a href="#"><img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
             </div>
             <div class="col-4">
               <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt="">
@@ -236,7 +246,7 @@
     var dt = new Date();
     var day = dt.getDate();
     var hor = dt.getHours();
-
+    
     //considering a match day on NOV 2 and NOV 3
     //the starting time is 7:30 pm
     //the team logo will change 12 hours before the game
@@ -313,3 +323,4 @@
 </body>
 
 </html>
+  <?php } ?>
