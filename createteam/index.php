@@ -418,7 +418,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
         <script>
         function check(){
-        return wkNo >= 2 && wkNo < 4 && batNo >= 2 && batNo < 4 && arNo >= 2 && arNo < 4 && bowlNo >= 2 && bowlNo < 4 ? true : false;
+        return wkNo >= 1 && wkNo < 4 && batNo >= 3 && batNo < 6 && arNo >= 1 && arNo < 4 && bowlNo >= 3 && bowlNo < 6 ? true : false;
         }
 
         function saveteam(){
