@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 include('config.php');
 if(isset($_POST['LOGIN']))
@@ -25,7 +25,8 @@ echo "<script type='text/javascript'> document.location = 'index/index.php'; </s
 }
 
 
-?> 
+?>  -->
+
 
 <!DOCTYPE html>
 <html>
@@ -40,6 +41,14 @@ echo "<script type='text/javascript'> document.location = 'index/index.php'; </s
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+  <style>
+   
+    @media only screen and (min-width: 650px) {
+      body{
+      background-image:url('login.jpg');
+    }
+}
+  </style>
 </head>
 
 <body>
