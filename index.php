@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 session_start();
 include('config.php');
 if(isset($_POST['LOGIN']))
@@ -25,7 +25,7 @@ echo "<script type='text/javascript'> document.location = 'index/index.php'; </s
 }
 
 
-?>  -->
+?>
 
 
 <!DOCTYPE html>

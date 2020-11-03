@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 session_start();
 include('../config.php');
 $sql ="SELECT * FROM player ";
@@ -7,7 +7,7 @@ $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let players = ".json_encode($results)."</script>";
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -456,32 +456,6 @@ echo "<script> let players = ".json_encode($results)."</script>";
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<<<<<<< HEAD
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-        crossorigin="anonymous"></script>
-
-    <script>
-        function check() {
-            return wkNo >= 2 && wkNo < 4 && batNo >= 2 && batNo < 4 && arNo >= 2 && arNo < 4 && bowlNo >= 2 && bowlNo < 4 ? true : false;
-        }
-
-        function saveteam() {
-            if (check()) {
-                $.post("saveteamdata.php",
-                    {
-                        temdata: JSON.stringify(myTeam)
-                    },
-                    function (data, status) {
-                        alert(data);
-                    });
-            } else {
-                alert("Not enough players selected select atleast 2 and atmost 4 players from each");
-            }
-=======
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
     crossorigin="anonymous"></script>
@@ -512,7 +486,6 @@ echo "<script> let players = ".json_encode($results)."</script>";
                     alert(data);
             });
         }
->>>>>>> ba94bbac22d6fb43f1393a4569f797371941de05
 
 
         }

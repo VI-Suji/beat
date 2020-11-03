@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <head>
@@ -114,20 +115,20 @@
 
 
 
-
       <div class="row mx-auto ">
         <div class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
           <div class="row">
+          
             <div class="col-4">
-              <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt="">
+            <a href="../createteam/index.php"><img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
             </div>
             <div class="col-4">
               <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt="">
             </div>  
-
-            <div class="col-4"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="srhcapb.jpeg" alt=""></div>
+            <div class="col-4">
+            <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="srhcapb.jpeg" alt=""></div></a>
           </div>
         </div>
 
