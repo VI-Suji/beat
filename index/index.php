@@ -88,10 +88,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
             </li>
-
             <li class="nav-item">
-              <button class = "btn btn-success rounded  ">log out</button>
-          </li>
+                <a class="nav-link" href="../index.php">Logout</a>
+            </li>
         </ul>
     </div>
 </nav>

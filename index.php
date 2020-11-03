@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('config.php');
+$_SESSION['alogin']='';
 if(isset($_POST['LOGIN']))
 {
 
