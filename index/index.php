@@ -96,7 +96,7 @@ else{
                 <a class="nav-link" href="../about/index.php">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
+                <a class="nav-link" href="http://www.istetkmce.in/contact.php">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../logout.php">Logout</a>
