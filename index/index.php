@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Fanstasy League ISTE</title>
+  <title>Beat The Game</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
 
