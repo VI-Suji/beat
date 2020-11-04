@@ -11,7 +11,6 @@ if(!($pass1==$pass2)){
     echo "<script type='text/javascript'> alert('Not match');  document.location = 'changepass.php'; </script>";
 }else{
     $pass=md5($pass1);
-    echo "$pass";
     $flag=1;
     $sql ="UPDATE `userlogin` SET `pass`=:pass WHERE `useremail`=:id";
     $query= $dbh -> prepare($sql);

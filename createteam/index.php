@@ -287,7 +287,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
                     <img onmouseover="glowEnter(this)" onmouseout="glowLeave(this)"
                         class="mx-auto d-block img-responsive img-fluid rounded-circle" src="micapb.jpeg">
                     <br>
-                    <h2 class="caption" style="color:white;  ">RCB</h2>
+                    <h2 class="caption" style="color:white;  ">MI</h2>
 
 
 
@@ -308,7 +308,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
                         id="team_img">
 
                     <br>
-                    <h2 class="caption" style="color:white; ">DC</h2>
+                    <h2 class="caption" style="color:white; ">SRH</h2>
 
                 </div>
 
