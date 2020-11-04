@@ -8,17 +8,13 @@ $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let myTeams = ".json_encode($results)."</script>";
 
-$sql ="SELECT * FROM myteam ORDER BY tscore DESC LIMIT 5";
+$sql ="SELECT * FROM userlogin ORDER BY score DESC LIMIT 5";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let toppers = ".json_encode($results)."</script>";
 
 ?>
-<script>
-  console.log(toppers);
-</script>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,12 +57,6 @@ echo "<script> let toppers = ".json_encode($results)."</script>";
 
   <div class="container ">
 
-
-
-
-
-
-
     <div class="center text-center p-5 shadow-lg rounded">
       <div class="row mx-auto text-center">
         <div class=" list mx-auto text-center d-flex justify-content-center text-align-center">
@@ -101,10 +91,13 @@ const setPlayers = () => {
             ${cnt}
             </div>
           <div class="name col-7 mx-auto" style = "font-weight:510;">
-        ${topper.username}
+        ${topper.name}
+          </div>
+          <div class="name col-7 mx-auto" style = "font-weight:510;">
+        ${topper.batch}
           </div>
          <div class="score col-5" style = "">
-        <strong>${topper.tscore}</strong>
+        <strong>${topper.score}</strong>
         </div>
             </div>
             </div>`;

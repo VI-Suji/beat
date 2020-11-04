@@ -30,6 +30,9 @@ echo "<script> let players = ".json_encode($results)."</script>";
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <style>
+        body{
+            background:white;
+        }
         li {
             list-style-type: none;
 
@@ -241,7 +244,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
     <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img"
-            class='logo'><span class='welcome-txt'> Welcome <span class='username'></span></span></a>
+            class='logo'><span class='welcome-txt'> <?php echo htmlentities($_SESSION['name']) ?><span class='username'>&nbsp;(<?php echo htmlentities($_SESSION['score']) ?>)</span></span></a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
         data-target="#navbarTogglerDemo02">
         <span class="navbar-toggler-icon"></span>
