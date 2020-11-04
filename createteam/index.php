@@ -4,7 +4,7 @@ error_reporting(0);
 include('../config.php');
 if(strlen($_SESSION['alogin'])==0)
 	{	
-header('location:../index.php');
+header('location:../login.php');
 }
 else{
 $sql ="SELECT * FROM player ";
@@ -183,7 +183,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
        
 
-        @media only screen and (max-width: 600px) {
+        /* @media only screen and (max-width: 600px) {
 
 
 
@@ -230,7 +230,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
             }
-        }
+        } */
     </style>
 </head>
 
@@ -239,32 +239,32 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
 
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
-            <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img" class='logo'><span
-                    class='welcome-txt'>Welcome <span class='username'></span></span></a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo02">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
+    <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img"
+            class='logo'><span class='welcome-txt'> Welcome <span class='username'></span></span></a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div style="text-align:center" class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="../index/index.php" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../leaderboard.php">LeaderBoard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../about/index.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="../index/index.php" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../leaderboard.php">LeaderBoard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../about/index.php">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.istetkmce.in/contact.php">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
         <!--  style="background: rgb(2,0,36);
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,0,0,1) 100%); -->

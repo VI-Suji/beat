@@ -6,8 +6,8 @@ if(isset($_POST['LOGIN']))
 {
 
 $email=$_POST['user'];
-$password=$_POST['password'];
-$sql ="SELECT * FROM userlogin WHERE useremail=:email and password=:password";
+$password=md5($_POST['password']);
+$sql ="SELECT * FROM userlogin WHERE useremail=:email and pass=:password";
 $query= $dbh -> prepare($sql);
 $query-> bindParam(':email', $email, PDO::PARAM_STR);
 $query-> bindParam(':password', $password, PDO::PARAM_STR);
@@ -19,7 +19,7 @@ $_SESSION['alogin']=$_POST['user'];
 echo "<script type='text/javascript'> document.location = 'index/index.php'; </script>";
 } else{
   
-  echo "<script>alert('Invalid Details'); document.location = 'index.php'; </script>";
+  echo "<script>alert('Invalid Details'); document.location = 'login.php'; </script>";
 
 }
 

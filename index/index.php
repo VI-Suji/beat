@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 if(strlen($_SESSION['alogin'])==0)
 	{	
-header('location:../index.php');
+header('location:../login.php');
 }
 else{
 
@@ -41,7 +41,11 @@ else{
 
 
   <style>
-    #upper-nav,.footer {
+    body{
+      background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(2, 44, 126, 1) 0%, rgba(192, 199, 200, 1) 0%, rgba(0, 3, 171, 1) 0%, rgba(0, 3, 2, 1) 100% );
+        
+    }
+    #upper-nav {
 
 
         background: rgb(2, 0, 36);
@@ -56,18 +60,15 @@ else{
         height: 9vmin;
     }
 
-    /* .footer {
+    .footer {
+        background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(2, 44, 126, 1) 0%, rgba(192, 199, 200, 1) 0%, rgba(0, 3, 171, 1) 0%, rgba(0, 3, 2, 1) 100% );
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        left: 0;
+        bottom: 0;
         width: 100%;
-        color: white;
-        font-weight: 600;
-        font-size: 0.9em;
-        background: url('https://image.freepik.com/free-vector/cricket-ball-fire_1308-33325.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-origin: content-box;
-        font-family: 'Roboto', sans-serif;
-    } */
+    }
 </style>
 
 </head>
@@ -190,53 +191,38 @@ else{
 
                </div>
         </div>
-
-
-
-
-       
+         
       </div>
+<!-- footer final completed -->
+<div class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
 
 
-  </section>
-
-  <footer class="row mx-auto">
-
-
-    <div class="footer row p-4 mx-auto jumbotron jumbo-color mt-1">
-
-
-        <div class="col-12">
-          
-
-            <div class="row mx-auto mb-3">
-                <div class="col-12 text-center my-auto pt-2 text-responsive text-center mx-auto  "
-                    style="font-size:1.2em; font-weight:550; font-family:sans-serif  -webkit-text-stroke: 1px black;
-                    color:white ;
-                    text-shadow:
-                        3px 3px 0 blue,
-                      -1px -1px 0 red,  
-                       1px -1px 0 blue,
-                       -1px 1px 0 blue,
-                        1px 1px 0 blue"><p>BEAT THE GAME</p></div>
-
-            </div>
-
-            <div class="row mx-auto my-auto">
-                <div class="col-md-1 col-4  pb-3 mx-auto">
-                    <img class="img-responsive mx-auto img-thumbnail img-fluid rounded-circle"
-                        style="width:25vmin;" src="iste.png" alt="iste">
-                </div>
-            </div>
-
-
-        </div>
-
+<div class="col-12">
+    <!-- buttons to previous and continue -->
+    <div class="row mx-auto mb-3 pt-2 p-2 rounded">
 
     </div>
 
-</footer>
 
+    <div class="row mx-auto mb-3">
+        <div class="col-12 text-center my-auto text-responsive text-center mx-auto  "
+            style="color: white; font-size:1.2em; font-weight:550;">BEAT THE GAME</div>
+
+    </div>
+
+    <div class="row mx-auto my-auto">
+        <div class="col-md-1 col-4  pb-3 mx-auto">
+            <img class="img-responsive mx-auto img-thumbnail img-fluid rounded-circle" style="width:25vmin;"
+                src="iste.png" alt="iste">
+        </div>
+    </div>
+
+
+</div>
+
+
+</div>
+</div>
 
   <!--START OF JS-->
   <script>
@@ -320,6 +306,7 @@ else{
       document.getElementById("opac4").style.opacity = 1;
     }
   </script>
+  
 </body>
 
 </html>

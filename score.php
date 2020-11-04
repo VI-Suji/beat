@@ -15,7 +15,7 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let players = ".json_encode($results)."</script>";
 ?>
 <script>
-    console.log(myTeams);
+    // console.log(myTeams);
 </script>
 <html lang="en">
 <head>
@@ -37,6 +37,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 function(data, status){
                     alert(data);
             });
+            document.location = 'login.php';
         }
 </script>
 <script>
@@ -60,7 +61,7 @@ myTeams.forEach((myTeam) => {
   myTeam.tscore = 2 * capScore + 1.5 * vCapScore + normalPlayersScore;
 });
 
-console.log(myTeams);
+// console.log(myTeams);
 </script>
 </body>
 </html>

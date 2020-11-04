@@ -1,0 +1,477 @@
+body {
+  margin: 0;
+}
+
+.container,
+.ring,
+.buttonShadow,
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img,
+svg,
+.cap,
+.buttonShadow,
+button {
+  position: absolute;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #070100;
+}
+
+img {
+  top: 50px;
+  width: 90px;
+}
+
+#st0 {
+  fill: #fff;
+  stroke: #e4836b;
+}
+
+.ring {
+  position: relative;
+  height: 340px;
+  width: 300px;
+}
+
+.cap {
+  height: 340px;
+  width: 35px;
+  overflow: hidden;
+}
+
+.up {
+  top: 0px;
+}
+
+.buttonShadow {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: 20;
+  box-shadow: 4px 4px 7px grey, -4px -4px 7px grey;
+}
+
+button {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: 20;
+  background: #070100;
+  outline: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cap1 {
+  transform: rotate(15deg);
+}
+
+.cap2 {
+  transform: rotate(30deg);
+}
+
+.cap3 {
+  transform: rotate(45deg);
+}
+
+.cap4 {
+  transform: rotate(60deg);
+}
+
+.cap5 {
+  transform: rotate(75deg);
+}
+
+.cap6 {
+  transform: rotate(90deg);
+}
+
+.cap7 {
+  transform: rotate(105deg);
+}
+
+.cap8 {
+  transform: rotate(120deg);
+}
+
+.cap9 {
+  transform: rotate(135deg);
+}
+
+.cap10 {
+  transform: rotate(150deg);
+}
+
+.cap11 {
+  transform: rotate(165deg);
+}
+
+.cap12 {
+  transform: rotate(180deg);
+}
+
+.cap13 {
+  transform: rotate(195deg);
+}
+
+.cap14 {
+  transform: rotate(210deg);
+}
+
+.cap15 {
+  transform: rotate(225deg);
+}
+
+.cap16 {
+  transform: rotate(240deg);
+}
+
+.cap17 {
+  transform: rotate(255deg);
+}
+
+.cap18 {
+  transform: rotate(270deg);
+}
+
+.cap19 {
+  transform: rotate(285deg);
+}
+
+.cap20 {
+  transform: rotate(300deg);
+}
+
+.cap21 {
+  transform: rotate(315deg);
+}
+
+.cap22 {
+  transform: rotate(330deg);
+}
+
+.cap23 {
+  transform: rotate(345deg);
+}
+
+.cap24 {
+  transform: rotate(360deg);
+}
+
+.cap25 {
+  transform: rotate(375deg);
+}
+
+.cap26 {
+  transform: rotate(390deg);
+}
+
+.cap27 {
+  transform: rotate(405deg);
+}
+
+.cap28 {
+  transform: rotate(420deg);
+}
+
+.cap29 {
+  transform: rotate(435deg);
+}
+
+.cap30 {
+  transform: rotate(450deg);
+}
+
+.cap31 {
+  transform: rotate(465deg);
+}
+
+.cap32 {
+  transform: rotate(480deg);
+}
+
+.cap33 {
+  transform: rotate(495deg);
+}
+
+.cap34 {
+  transform: rotate(510deg);
+}
+
+.cap35 {
+  transform: rotate(525deg);
+}
+
+.cap36 {
+  transform: rotate(540deg);
+}
+
+.cap37 {
+  transform: rotate(555deg);
+}
+
+.cap38 {
+  transform: rotate(570deg);
+}
+
+.cap39 {
+  transform: rotate(585deg);
+}
+
+.cap40 {
+  transform: rotate(600deg);
+}
+
+.cap41 {
+  transform: rotate(615deg);
+}
+
+.cap42 {
+  transform: rotate(630deg);
+}
+
+.cap43 {
+  transform: rotate(645deg);
+}
+
+.cap44 {
+  transform: rotate(660deg);
+}
+
+.cap45 {
+  transform: rotate(675deg);
+}
+
+.cap46 {
+  transform: rotate(690deg);
+}
+
+.cap47 {
+  transform: rotate(705deg);
+}
+
+.cap48 {
+  transform: rotate(720deg);
+}
+
+.cap49 {
+  transform: rotate(735deg);
+}
+
+.cap50 {
+  transform: rotate(750deg);
+}
+
+.cap51 {
+  transform: rotate(765deg);
+}
+
+.cap52 {
+  transform: rotate(780deg);
+}
+
+.cap53 {
+  transform: rotate(795deg);
+}
+
+.cap54 {
+  transform: rotate(810deg);
+}
+
+.cap55 {
+  transform: rotate(825deg);
+}
+
+.cap56 {
+  transform: rotate(840deg);
+}
+
+.cap57 {
+  transform: rotate(855deg);
+}
+
+.cap58 {
+  transform: rotate(870deg);
+}
+
+.cap59 {
+  transform: rotate(885deg);
+}
+
+.cap60 {
+  transform: rotate(900deg);
+}
+
+.cap61 {
+  transform: rotate(915deg);
+}
+
+.cap62 {
+  transform: rotate(930deg);
+}
+
+.cap63 {
+  transform: rotate(945deg);
+}
+
+.cap64 {
+  transform: rotate(960deg);
+}
+
+.cap65 {
+  transform: rotate(975deg);
+}
+
+.cap66 {
+  transform: rotate(990deg);
+}
+
+.cap67 {
+  transform: rotate(1005deg);
+}
+
+.cap68 {
+  transform: rotate(1020deg);
+}
+
+.cap69 {
+  transform: rotate(1035deg);
+}
+
+.cap70 {
+  transform: rotate(1050deg);
+}
+
+.cap71 {
+  transform: rotate(1065deg);
+}
+
+.cap72 {
+  transform: rotate(1080deg);
+}
+
+.cap73 {
+  transform: rotate(1095deg);
+}
+
+.cap74 {
+  transform: rotate(1110deg);
+}
+
+.cap75 {
+  transform: rotate(1125deg);
+}
+
+.cap76 {
+  transform: rotate(1140deg);
+}
+
+.cap77 {
+  transform: rotate(1155deg);
+}
+
+.cap78 {
+  transform: rotate(1170deg);
+}
+
+.cap79 {
+  transform: rotate(1185deg);
+}
+
+.cap80 {
+  transform: rotate(1200deg);
+}
+
+.cap81 {
+  transform: rotate(1215deg);
+}
+
+.cap82 {
+  transform: rotate(1230deg);
+}
+
+.cap83 {
+  transform: rotate(1245deg);
+}
+
+.cap84 {
+  transform: rotate(1260deg);
+}
+
+.cap85 {
+  transform: rotate(1275deg);
+}
+
+.cap86 {
+  transform: rotate(1290deg);
+}
+
+.cap87 {
+  transform: rotate(1305deg);
+}
+
+.cap88 {
+  transform: rotate(1320deg);
+}
+
+.cap89 {
+  transform: rotate(1335deg);
+}
+
+.cap90 {
+  transform: rotate(1350deg);
+}
+
+.cap91 {
+  transform: rotate(1365deg);
+}
+
+.cap92 {
+  transform: rotate(1380deg);
+}
+
+.cap93 {
+  transform: rotate(1395deg);
+}
+
+.cap94 {
+  transform: rotate(1410deg);
+}
+
+.cap95 {
+  transform: rotate(1425deg);
+}
+
+.cap96 {
+  transform: rotate(1440deg);
+}
+
+.cap97 {
+  transform: rotate(1455deg);
+}
+
+.cap98 {
+  transform: rotate(1470deg);
+}
+
+.cap99 {
+  transform: rotate(1485deg);
+}
+
+.cap100 {
+  transform: rotate(1500deg);
+}
+
+svg {
+  background: transparent;
+}
