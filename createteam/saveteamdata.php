@@ -18,13 +18,28 @@ if($query->rowCount() > 0)
     echo "Sorry already submitted ";
     return;
 }else{
+    $sql ="SELECT * FROM userlogin WHERE useremail=:email";
+    $query= $dbh -> prepare($sql);
+    $query-> bindParam(':email', $email, PDO::PARAM_STR);
+    $query-> execute();
+    $results=$query->fetchAll(PDO::FETCH_OBJ);
+    
+    if($query->rowCount() > 0)
+    {
+        foreach($results as $result)
+        {	
+            $username=$result->username;
+            echo "$result->username";
+        }
+    }
 $score = 0;
 // $email="test";
-$sql ="INSERT INTO `myteam` ( `useremail`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `p7`, `p8`, `p9`, `p10`, `p11`, `tscore`) VALUES (:email, :p1,:p2,:p3,:p4,:p5,:p6,:p7,:p8,:p9,:p10,:p11,:score)";
+$sql ="INSERT INTO `myteam` ( `useremail`,`username`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `p7`, `p8`, `p9`, `p10`, `p11`, `tscore`) VALUES (:email, :username, :p1,:p2,:p3,:p4,:p5,:p6,:p7,:p8,:p9,:p10,:p11,:score)";
 $query= $dbh -> prepare($sql);
 
 
 $query-> bindParam(':email', $email, PDO::PARAM_STR);
+$query-> bindParam(':username', $username, PDO::PARAM_STR);
 $query-> bindParam(':score', $score, PDO::PARAM_STR);
 $empty="";
 for($i=0;$i<11;$i++){
