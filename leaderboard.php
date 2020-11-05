@@ -8,7 +8,7 @@ $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let myTeams = ".json_encode($results)."</script>";
 
-$sql ="SELECT * FROM userlogin ORDER BY score DESC LIMIT 5";
+$sql ="SELECT * FROM userlogin ORDER BY score DESC LIMIT 5 WHERE score!=0";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
