@@ -241,9 +241,9 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div style="align:center" class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-                <ul class="navbar-nav ml-auto">
+                <ul style="text-align:center;" class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="../index/index.php" class="nav-link">Home</a>
                     </li>
