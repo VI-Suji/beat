@@ -81,13 +81,13 @@
                 <a href="../index/index.php" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">LeaderBoard</a>
+                <a class="nav-link" href="../leaderboard.php">LeaderBoard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="../about/index.php">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../index.php">Logout</a>
