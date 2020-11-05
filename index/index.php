@@ -98,7 +98,7 @@
                 <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../index.php">Logout</a>
+                <a class="nav-link" href="../logout.php">Logout</a>
             </li>
         </ul>
     </div>
