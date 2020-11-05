@@ -22,6 +22,11 @@ if(!($pass1==$pass2)){
     $query-> bindParam(':flag', $flag, PDO::PARAM_INT);
     $query-> bindParam(':id', $email, PDO::PARAM_STR);
     $query->execute();
+    $sql ="UPDATE `userlogin` SET `password`=:pass WHERE `useremail`=:id";
+    $query= $dbh -> prepare($sql);
+    $query-> bindParam(':pass', $pass1, PDO::PARAM_INT);
+    $query-> bindParam(':id', $email, PDO::PARAM_STR);
+    $query->execute();
     echo "<script type='text/javascript'> alert('Success');  document.location = 'index/index.php'; </script>";
     }
 
