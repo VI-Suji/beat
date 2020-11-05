@@ -112,7 +112,7 @@ if($query->rowCount() > 0)
                 </div>
               </div>
     
-              <input onclick="checkid()" id="subbt" type="submit" name="LOGIN" class="btn-login btn btn-success" style = "background-color:#141E30;"/>
+              <input onclick="checkid()" value="LOGIN" id="subbt" type="submit" name="LOGIN" class="btn-login btn btn-success" style = "background-color:#141E30;"/>
               <br><br>
               <input id="sub" value="SIGNUP" type="submit" name="SIGNUP" class="btn-signup btn btn-success" style = "background-color:#141E30;" placeholder="SIGNUP" />
               
