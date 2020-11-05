@@ -235,7 +235,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
         <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
             <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img" class='logo'><span
-                    class='welcome-txt'>Welcome <span class='username'></span></span></a>
+                    class='welcome-txt'><?php echo htmlentities($_SESSION['name']); ?><span class='username'></span>(<?php echo htmlentities($_SESSION['score']); ?>)</span></a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
