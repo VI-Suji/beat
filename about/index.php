@@ -73,7 +73,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-                    <ul class="navbar-nav ml-auto">
+                    <ul style="text-align:center;" class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="../index/index.php" class="nav-link">Home</a>
                         </li>
