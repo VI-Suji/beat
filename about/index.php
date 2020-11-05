@@ -29,15 +29,19 @@
         crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        body{
+            background: black;
+        }
         #upper-nav,
         .footer {
-
+            position : relative;
+            margin-bottom: 0px;
             background: rgb(2, 0, 36);
             background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(255, 0, 0, 1) 100%);
             border-radius: 5px;
             color: white;
             width: 100%;
-            margin-bottom: 0;
+            
         }
 
         #nav-11-img {
