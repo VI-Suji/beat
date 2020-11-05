@@ -331,7 +331,7 @@ function setMyteam(play,count){
 //   playersElement.innerHTML = playersList;
 // };
 
-setMyteam(myT[0].p2,1);
+setMyteam(myT[0].p1,1);
 setMyteam(myT[0].p2,2);
 setMyteam(myT[0].p3,0);
 setMyteam(myT[0].p4,0);
