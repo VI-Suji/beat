@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('config.php');
+include('../config.php');
 $sql ="SELECT * FROM myteam ";
 $query= $dbh -> prepare($sql);
 $query-> execute();
@@ -37,7 +37,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 function(data, status){
                     alert(data);
             });
-            document.location = 'login.php';
+            document.location = '../login.php';
         }
 </script>
 <script>

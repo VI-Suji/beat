@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('config.php');
+include('../config.php');
 $jdata=json_decode($_POST['temdata']);
 
 for($i=0;$i<count($jdata);$i++){
