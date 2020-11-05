@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('../config.php');
+    include('config.php');
     $flag=0;
     $sql ="SELECT * FROM `userlogin`";
     $query= $dbh -> prepare($sql);
