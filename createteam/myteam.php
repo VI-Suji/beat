@@ -244,8 +244,7 @@ echo "<script> let myT = ".json_encode($results)."</script>";
 
                 <div class="row">
                     <div class="col-6 mx-auto" style="color:white; font-weight:520;">My Team</div>
-                    <div class=" col-6" id="usedCredit">
-
+                    <div class=" col-6" id="usedCredit" style="color:white; font-weight:520;"> Score: <?php echo htmlentities($_SESSION['score']); ?>
                     </div>
                 </div>
 
