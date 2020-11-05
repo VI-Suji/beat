@@ -1,25 +1,20 @@
 <?php
 session_start();
-error_reporting(0);
 include('../config.php');
-if(strlen($_SESSION['alogin'])==0)
-	{	
-header('location:../login.php');
-}
-else{
 $sql ="SELECT * FROM player ";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 echo "<script> let players = ".json_encode($results)."</script>";
+
 ?>
 
-
-<html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./iste.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beat the game</title>
     <link rel="stylesheet" href="header.css">
@@ -30,9 +25,6 @@ echo "<script> let players = ".json_encode($results)."</script>";
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <style>
-        body{
-            background:white;
-        }
         li {
             list-style-type: none;
 
@@ -186,7 +178,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
        
 
-        /* @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 600px) {
 
 
 
@@ -195,11 +187,10 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 background-image: url('before-cut.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: auto;
                 border-radius: 2vmin;
                 background-origin: center;
                 background-position-x: -3vw;
-                background-position-y: 5vh;
+                background-position-y: -11vh;
                 width: 100%;
                 background-color: black;
 
@@ -233,7 +224,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
             }
-        } */
+        }
     </style>
 </head>
 
@@ -242,32 +233,32 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
-    <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img"
-            class='logo'><span class='welcome-txt'> <?php echo htmlentities($_SESSION['name']) ?><span class='username'>&nbsp;(<?php echo htmlentities($_SESSION['score']) ?>)</span></span></a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-        data-target="#navbarTogglerDemo02">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
+            <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img" class='logo'><span
+                    class='welcome-txt'>Welcome <span class='username'></span></span></a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div style="text-align:center" class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="../index/index.php" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../leaderboard.php">LeaderBoard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../about/index.php">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://www.istetkmce.in/contact.php">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../index/index.php" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LeaderBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <!--  style="background: rgb(2,0,36);
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,0,0,1) 100%); -->
@@ -295,20 +286,22 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 </div>
 
 
-                <div class="col-4 col-md-4 my-auto item">
-                    <img
-                        class="mx-auto d-block img-responsive img-fluid rounded-circle" src="lol.png">
+                <div class="col-4 col-md-4 mt-2">
+                    <img class="mx-auto d-block  rounded-circle " src="lol.png" style="width:70%;
+                    height:auto; border-radius:100%; ">
+
                 </div>
+
 
 
                 <div class="col-4 col-md-4 item">
 
                     <img onmouseover="glowEnter(this)" onmouseout="glowLeave(this)"
-                        class="mx-auto d-block img-responsive  img-fluid rounded-circle" src="srhcapb.jpeg"
+                        class="mx-auto d-block img-responsive  img-fluid rounded-circle" src="dccapb.jpeg"
                         id="team_img">
 
                     <br>
-                    <h2 class="caption" style="color:white; ">SRH</h2>
+                    <h2 class="caption" style="color:white; ">DC</h2>
 
                 </div>
 
@@ -503,4 +496,3 @@ echo "<script> let players = ".json_encode($results)."</script>";
 </body>
 
 </html>
-    <?php } ?>

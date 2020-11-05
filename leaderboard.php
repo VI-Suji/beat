@@ -20,6 +20,7 @@ echo "<script> let toppers = ".json_encode($results)."</script>";
 <html lang="en">
 
 <head>
+  <link rel="icon" href="iste.png" type="image/icon type">
   <link rel="stylesheet" href="css/lbstyle.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,19 +1,10 @@
-<?php
-session_start();
-error_reporting(0);
-if(strlen($_SESSION['alogin'])==0)
-	{	
-header('location:../login.php');
-}
-else{
-
-  ?>
 
 <!DOCTYPE html>
 
 <head>
 
   <title>Beat The Game</title>
+  <link rel="icon" href="iste.png" type="image/icon type">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
 
@@ -41,11 +32,7 @@ else{
 
 
   <style>
-    body{
-      background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(2, 44, 126, 1) 0%, rgba(192, 199, 200, 1) 0%, rgba(0, 3, 171, 1) 0%, rgba(0, 3, 2, 1) 100% );
-        
-    }
-    #upper-nav {
+    #upper-nav,.footer {
 
 
         background: rgb(2, 0, 36);
@@ -60,15 +47,18 @@ else{
         height: 9vmin;
     }
 
-    .footer {
-        background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(2, 44, 126, 1) 0%, rgba(192, 199, 200, 1) 0%, rgba(0, 3, 171, 1) 0%, rgba(0, 3, 2, 1) 100% );
-        position: relative;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        left: 0;
-        bottom: 0;
+    /* .footer {
         width: 100%;
-    }
+        color: white;
+        font-weight: 600;
+        font-size: 0.9em;
+        background: url('https://image.freepik.com/free-vector/cricket-ball-fire_1308-33325.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-origin: content-box;
+        font-family: 'Roboto', sans-serif;
+    } */
 </style>
 
 </head>
@@ -78,7 +68,7 @@ else{
 
   <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
     <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img"
-            class='logo'><span class='welcome-txt'> <?php echo htmlentities($_SESSION['name']) ?> <span class='username'></span>(<?php echo htmlentities($_SESSION['score']) ?>)</span></a>
+            class='logo'><span class='welcome-txt'> Welcome <span class='username'></span></span></a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
         data-target="#navbarTogglerDemo02">
         <span class="navbar-toggler-icon"></span>
@@ -91,16 +81,16 @@ else{
                 <a href="../index/index.php" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../leaderboard.php">LeaderBoard</a>
+                <a class="nav-link" href="#">LeaderBoard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../about/index.php">About</a>
+                <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://www.istetkmce.in/contact.php">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../logout.php">Logout</a>
+                <a class="nav-link" href="../index.php">Logout</a>
             </li>
         </ul>
     </div>
@@ -126,36 +116,35 @@ else{
 
 
       <div class="row mx-auto ">
-        <div style="background: black;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+
+      <div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
           <div class="row">
-          
             <div class="col-4">
-            <a href="#"><img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
+              <a href="../createteam/index.php">
+              <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
             </div>
             <div class="col-4">
-              <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt="">
+            <a href="../createteam/index.php">
+              <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt=""></a>
             </div>  
+
             <div class="col-4">
-            <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="srhcapb.jpeg" alt=""></div></a>
-          </div>
+            <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="dccapb.jpeg" alt=""></div>
+            </a></div>
         </div>
 
-
-        <div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+        <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
-          <div class="row">
-            <div class="col-4">
-              <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt="">
+           <div class="row">
+            <div class=" row match-title dark fire  mx-auto my-auto">
+              <p class="Blazing title-text mx-auto mt-5 pb-3"><span class="mad">COMING SOON</span>
+              <p>
             </div>
-            <div class="col-4">
-              <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt="">
-            </div>  
 
-            <div class="col-4"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="dccapb.jpeg" alt=""></div>
-          </div>
+               </div>
         </div>
 
 
@@ -167,7 +156,7 @@ else{
 
 
       <div class="row mx-auto ">
-        <div style="background: black;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+        <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
            <div class="row">
@@ -191,38 +180,53 @@ else{
 
                </div>
         </div>
-         
+
+
+
+
+       
       </div>
-<!-- footer final completed -->
-<div class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
 
 
-<div class="col-12">
-    <!-- buttons to previous and continue -->
-    <div class="row mx-auto mb-3 pt-2 p-2 rounded">
+  </section>
 
-    </div>
+  <footer class="row mx-auto">
 
 
-    <div class="row mx-auto mb-3">
-        <div class="col-12 text-center my-auto text-responsive text-center mx-auto  "
-            style="color: white; font-size:1.2em; font-weight:550;">BEAT THE GAME</div>
+    <div class="footer row p-4 mx-auto jumbotron jumbo-color mt-1">
 
-    </div>
 
-    <div class="row mx-auto my-auto">
-        <div class="col-md-1 col-4  pb-3 mx-auto">
-            <img class="img-responsive mx-auto img-thumbnail img-fluid rounded-circle" style="width:25vmin;"
-                src="iste.png" alt="iste">
+        <div class="col-12">
+          
+
+            <div class="row mx-auto mb-3">
+                <div class="col-12 text-center my-auto pt-2 text-responsive text-center mx-auto  "
+                    style="font-size:1.2em; font-weight:550; font-family:sans-serif  -webkit-text-stroke: 1px black;
+                    color:white ;
+                    text-shadow:
+                        3px 3px 0 blue,
+                      -1px -1px 0 red,  
+                       1px -1px 0 blue,
+                       -1px 1px 0 blue,
+                        1px 1px 0 blue"><p>BEAT THE GAME</p></div>
+
+            </div>
+
+            <div class="row mx-auto my-auto">
+                <div class="col-md-1 col-4  pb-3 mx-auto">
+                    <img class="img-responsive mx-auto img-thumbnail img-fluid rounded-circle"
+                        style="width:25vmin;" src="iste.png" alt="iste">
+                </div>
+            </div>
+
+
         </div>
+
+
     </div>
 
+</footer>
 
-</div>
-
-
-</div>
-</div>
 
   <!--START OF JS-->
   <script>
@@ -232,7 +236,7 @@ else{
     var dt = new Date();
     var day = dt.getDate();
     var hor = dt.getHours();
-    
+
     //considering a match day on NOV 2 and NOV 3
     //the starting time is 7:30 pm
     //the team logo will change 12 hours before the game
@@ -306,8 +310,6 @@ else{
       document.getElementById("opac4").style.opacity = 1;
     }
   </script>
-  
 </body>
 
 </html>
-  <?php } ?>

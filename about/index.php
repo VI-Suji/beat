@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./iste.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISTE</title>
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
