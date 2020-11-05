@@ -1,4 +1,6 @@
-
+<?php
+ session_start();
+ ?>
 <!DOCTYPE html>
 
 <head>
@@ -75,9 +77,9 @@
 
 
   <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
-    <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img"
-            class='logo'><span class='welcome-txt'> Welcome <span class='username'></span></span></a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+  <a class="navbar-brand" href="#"><img src='../lol.png' id="nav-11-img" class='logo'><span
+                    class='welcome-txt'> <?php echo htmlentities($_SESSION['name']); ?><span class='username'> (<?php echo htmlentities($_SESSION['score']); ?>)</span></span></a>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
         data-target="#navbarTogglerDemo02">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -122,27 +124,53 @@
       
 
 
+    <div class="row mx-auto ">
+
+<div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 0.5;">
+  <h2>5-NOV-2020</h2>
+    <div class="row">
+      <div class="col-4">
+        <a href="../createteam/index.php">
+        <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
+      </div>
+      <div class="col-4">
+      <a href="../createteam/index.php">
+        <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt=""></a>
+      </div>  
+
+      <div class="col-4">
+      <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="dccapb.jpeg" alt=""></div>
+      </a></div>
+  </div>
+
+  <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 0.5;">
+     <div class="row">
+      <div class=" row match-title dark fire  mx-auto my-auto">
+        <p class="Blazing title-text mx-auto mt-5 pb-3"><span class="mad">COMING SOON</span>
+        <p>
+      </div>
+
+         </div>
+  </div>
+</div>
 
       <div class="row mx-auto ">
 
-      <div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
-        padding: 10px;
-        box-shadow: 5px 10px 0.5;">
-        <h2>5-NOV-2020</h2>
-          <div class="row">
-            <div class="col-4">
-              <a href="../createteam/index.php">
-              <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
-            </div>
-            <div class="col-4">
-            <a href="../createteam/index.php">
-              <img class = "img-responsive img-thumbnail img-fluid rounded-circle" src="vs.jpg" alt=""></a>
-            </div>  
+      <div style="background: blue;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 0.5;">
+     <div class="row">
+      <div class=" row match-title dark fire  mx-auto my-auto">
+        <p class="Blazing title-text mx-auto mt-5 pb-3"><span class="mad">COMING SOON</span>
+        <p>
+      </div>
 
-            <div class="col-4">
-            <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="dccapb.jpeg" alt=""></div>
-            </a></div>
-        </div>
+         </div>
+  </div>
 
         <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
@@ -155,16 +183,11 @@
 
                </div>
         </div>
-
-
-
-
-       
       </div>
 
 
 
-      <div class="row mx-auto ">
+      <!-- <div class="row mx-auto ">
         <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
@@ -194,7 +217,7 @@
 
 
        
-      </div>
+      </div> -->
 
   <div class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
 

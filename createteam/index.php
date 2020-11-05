@@ -1,7 +1,18 @@
 <?php
 session_start();
+// echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
 include('../config.php');
-$sql ="SELECT * FROM player ";
+$email=$_SESSION['alogin'];
+$sql ="SELECT * FROM myteam WHERE useremail=:email ";
+$query= $dbh -> prepare($sql);
+$query-> bindParam(':email', $email, PDO::PARAM_STR);
+$query-> execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+if($query->rowCount()>0){
+    echo "<script type='text/javascript'>document.location = 'myteam.php';</script>";
+    
+}else{
+$sql ="SELECT * FROM player WHERE 0";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -234,8 +245,8 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
         <nav class="navbar navbar-expand-lg navbar-dark navbar-trans navbar-inverse rounded mb-1" id="upper-nav">
-            <a class="navbar-brand" href="#"><img src='1024px-Eleven_logo.svg.png' id="nav-11-img" class='logo'><span
-                    class='welcome-txt'>Welcome <span class='username'></span></span></a>
+            <a class="navbar-brand" href="#"><img src='../lol.png' id="nav-11-img" class='logo'><span
+                    class='welcome-txt'> <?php echo htmlentities($_SESSION['name']); ?><span class='username'> (<?php echo htmlentities($_SESSION['score']); ?>)</span></span></a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
@@ -467,20 +478,30 @@ echo "<script> let players = ".json_encode($results)."</script>";
     crossorigin="anonymous"></script>
 
         <script>
-        function check(){
-            if(!(wkNo >= 1 && wkNo < 4 && arNo >= 1 && arNo < 4)){
-                alert("Not enough players selected select atleast 1 and atmost 4 keepers and all rounders from each");
-                return false;
-            }else if(!(batNo >= 3 && batNo < 6 && bowlNo >= 3 && bowlNo < 6)){
-                alert("Not enough players selected select atleast 3 and atmost 6 batsmen and bowlers from each");
-                return false;
-            }else{
-                return true;
-            }
-        }
+        // function check(){
+        //     if(!(wkNo >= 1 && wkNo < 4 && arNo >= 1 && arNo < 4)){
+        //         alert("Not enough players selected select atleast 1 and atmost 4 keepers and all rounders from each");
+        //         return false;
+        //     }else if(!(batNo >= 3 && batNo < 6 && bowlNo >= 3 && bowlNo < 6)){
+        //         alert("Not enough players selected select atleast 3 and atmost 6 batsmen and bowlers from each");
+        //         return false;
+        //     }else{
+        //         return true;
+        //     }
+        // }
 
         function saveteam(){
-            if(check()){
+            let flag=0;
+            if(!(wkNo >= 1 && wkNo < 4 && arNo >= 1 && arNo <= 4)){
+                alert("Not enough players selected select atleast 1 and atmost 4 keepers and all rounders from each");
+                flag=0;
+            }else if(!(batNo >= 3 && batNo < 6 && bowlNo >= 3 && bowlNo < 6)){
+                alert("Not enough players selected select atleast 3 and atmost 6 batsmen and bowlers from each");
+                flag=0;
+            }else{
+                flag=1;
+            }
+            if(flag){
             $.post("saveteamdata.php",
                 {
                     temdata:  JSON.stringify(myTeam)
@@ -498,3 +519,4 @@ echo "<script> let players = ".json_encode($results)."</script>";
 </body>
 
 </html>
+    <?php } ?>

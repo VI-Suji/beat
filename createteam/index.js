@@ -95,7 +95,7 @@ const addPlayer = (name) => {
       alert(`only ${maxPlayers} player can be selected`);
       break; // max player check
     case !catogoryCheck():
-      alert("Max players reached for this catogory");
+      alert("Maximum players reached for this catogory");
       break; // cagogary limit check
 
     default:

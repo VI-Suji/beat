@@ -1,0 +1,10 @@
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='MI') WHERE `name`='MI';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='DC') WHERE `name`='DC';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='RCB') WHERE `name`='RCB';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='RR') WHERE `name`='RR';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='KKR') WHERE `name`='KKR';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='KXIP') WHERE `name`='KXIP';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='SRH') WHERE `name`='SRH';
+UPDATE `fan` SET `score`=`score`+(SELECT SUM(score) FROM `myteam`,`userlogin` WHERE `myteam`.`useremail`=`userlogin`.`useremail` AND `userlogin`.`fav`='CSK') WHERE `name`='CSK';
+
+UPDATE `dept` SET `score` = `score` +( SELECT SUM(score) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'R%' ) WHERE `name` = 'CS'

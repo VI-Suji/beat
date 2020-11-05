@@ -1,8 +1,25 @@
+<?php
+session_start();
+$email=$_SESSION['alogin'];
+if(strlen($email)==0){
+    echo "<script>document.location = '../login.php'; </script>";
+}else{
+// echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
+include('../config.php');
+$sql ="SELECT * FROM myteam WHERE useremail = :email";
+$query= $dbh -> prepare($sql);
+$query-> bindParam(':email', $email, PDO::PARAM_STR);
+$query-> execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+echo "<script> let myT = ".json_encode($results)."</script>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <!-- <script src="myteam.js"></script> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beat the game</title>
     <link rel="stylesheet" href="header.css">
@@ -13,6 +30,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <style>
+        body{
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,0,0,1) 100%);
+        }
         li {
             list-style-type: none;
 
@@ -41,6 +61,7 @@
         }
 
         .block {
+            
             display: block;
             width: 100%;
             color: white;
@@ -130,7 +151,9 @@
             color: white;
             font-weight: 600;
             font-size: 0.9em;
-            background: url('https://image.freepik.com/free-vector/cricket-ball-fire_1308-33325.jpg');
+
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(255,0,0,1) 100%);
+            /* background: url('https://image.freepik.com/free-vector/cricket-ball-fire_1308-33325.jpg'); */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -185,16 +208,16 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../index/index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#footer">LeaderBoard</a>
+                        <a class="nav-link" href="../leaderboard.php">LeaderBoard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing">About</a>
+                        <a class="nav-link" href="../about/index.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cta">Contact</a>
+                        <a class="nav-link" href="http://istetkmce.in/contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -265,9 +288,102 @@
         </div>
     </div>
 
+    <script>
+        // let myTeam =  JSON.parse(localStorage.getItem('myTeam'));
+// console.log(myT);
+// alert("working");
 
+// setting my team to the right of the window
+let playerhtml='';
+let playersList='';
+let c=0;
 
-    <script src="myteam.js"></script>
+function setMyteam(play,count){
+    c=c+1;
+    if (count==1) {
+      badge = "(C)";
+    } else if (count==2) {
+      badge = "(VC)";
+    } else badge = "";
+
+    console.log(play)
+
+    playerhtml += `<div class = "col-12 text-center shadow-lg  mb-1 bg-white rounded-pill mx-auto" style = " border:1px solid orange;overflow:hidden;" >
+        <div class = "row my-auto p-2" style = "background-color:black; color:white;">
+        <div class = "col-3" style = "font-weight:500;text-transform:uppercase;font-size:.9em;"><li>${c}</div></div>
+        <div class = "col-12" style = "font-weight:500;text-transform:uppercase;font-size:.9em;">
+        <li>${play}${badge}<br></li></div>
+         
+        <div class = "col-3"style = "font-weight:500;text-transform:uppercase;font-size:.9em;">
+        <a></a></div>
+           
+        <div class = "col-3">
+         </div></div></div>`;
+    return playerhtml;
+}
+
+// const setMyteam = (play,count) => {
+//   playersList = myT.reduce((playerhtml, player) => {
+    
+//   }, "");
+
+//   playersElement = document.getElementById("myTeam");
+//   playersElement.innerHTML = playersList;
+// };
+
+setMyteam(myT[0].p2,1);
+setMyteam(myT[0].p2,2);
+setMyteam(myT[0].p3,0);
+setMyteam(myT[0].p4,0);
+setMyteam(myT[0].p5,0);
+setMyteam(myT[0].p6,0);
+setMyteam(myT[0].p7,0);
+setMyteam(myT[0].p8,0);
+setMyteam(myT[0].p9,0);
+setMyteam(myT[0].p10,0);
+setMyteam(myT[0].p11,0);
+playersElement = document.getElementById("myTeam");
+playersElement.innerHTML = playerhtml;
+
+function revealMessage() {
+  document.getElementById("lol").style.display = "block";
+}
+
+function countFunc() {
+  var cur_val = document.getElementById("count").innerHTML;
+  var newVal = cur_val - 1;
+
+  document.getElementById("count").innerHTML = newVal;
+}
+
+function glowLeave(parent) {
+  parent.style.border = "10px solid #495057";
+}
+
+function glowEnter(parent) {
+  parent.style.border = "10px solid #e63946";
+}
+
+function glowEnter3(parent) {
+  parent.style.border = "10px solid blue";
+}
+//extra added by luhta
+function glowEnter2(parent) {
+  parent.style.border = ".25vmin solid orange";
+}
+function glowLeave2(parent) {
+  parent.style.border = ".25vmin solid #495057";
+}
+
+function glowEnter3(parent) {
+  parent.style.border = ".25vmin solid orange";
+}
+function glowLeave3(parent) {
+  parent.style.border = ".25vmin solid #495057";
+}
+
+</script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -281,3 +397,4 @@
 </body>
 
 </html>
+    <?php } ?>
