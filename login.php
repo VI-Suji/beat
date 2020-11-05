@@ -2,9 +2,11 @@
 session_start();
 error_reporting(0);
 include('config.php');
+if(isset($_POST['SIGNUP'])){
+  echo "<script type='text/javascript'> document.location = 'signup.php'; </script>";
+}
 if(isset($_POST['LOGIN']))
 {
-
 $email=$_POST['user'];
 $password=md5($_POST['password']);
 $sql ="SELECT * FROM userlogin WHERE useremail=:email and pass=:password";
@@ -110,6 +112,9 @@ if($query->rowCount() > 0)
               </div>
     
               <input onclick="checkid()" id="subbt" type="submit" name="LOGIN" class="btn-login btn btn-success" style = "background-color:#141E30;"/>
+              <br><br>
+              <input id="sub" value="SIGNUP" type="submit" name="SIGNUP" class="btn-signup btn btn-success" style = "background-color:#141E30;" placeholder="SIGNUP" />
+              
             </form>
           </div>
         </div>
