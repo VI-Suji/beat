@@ -126,7 +126,7 @@ else{
 
 
       <div class="row mx-auto ">
-        <div class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+        <div style="background: black;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
           <div class="row">
@@ -143,7 +143,7 @@ else{
         </div>
 
 
-        <div class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+        <div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
           <div class="row">
@@ -167,7 +167,7 @@ else{
 
 
       <div class="row mx-auto ">
-        <div class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+        <div style="background: black;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
            <div class="row">
@@ -180,7 +180,7 @@ else{
         </div>
 
 
-        <div class="col-12 col-md-6 p-4 mb-4 rounded " style=" border: 1px solid;
+        <div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded " style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
           <div class="row">
