@@ -178,7 +178,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
        
 
-        @media only screen and (max-width: 600px) {
+        /* @media only screen and (max-width: 600px) {
 
 
 
@@ -224,7 +224,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
             }
-        }
+        } */
     </style>
 </head>
 
@@ -241,7 +241,7 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div style="align:center" class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -286,9 +286,11 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 </div>
 
 
-                <div class="col-4 col-md-4 mt-2">
-                    <img class="mx-auto d-block  rounded-circle " src="lol.png" style="width:70%;
-                    height:auto; border-radius:100%; ">
+                <div class="col-4 col-md-4 item">
+
+                    <img
+                        class="mx-auto d-block img-responsive  img-fluid rounded-circle" src="lol.png"
+                        id="team_img">
 
                 </div>
 

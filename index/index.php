@@ -32,6 +32,16 @@
 
 
   <style>
+    body{
+      background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(2, 44, 126, 1) 0%,
+    rgba(192, 199, 200, 1) 0%,
+    rgba(0, 3, 171, 1) 0%,
+    rgba(0, 3, 2, 1) 100%
+  );
+    }
     #upper-nav,.footer {
 
 
@@ -47,18 +57,16 @@
         height: 9vmin;
     }
 
-    /* .footer {
-        width: 100%;
-        color: white;
-        font-weight: 600;
-        font-size: 0.9em;
-        background: url('https://image.freepik.com/free-vector/cricket-ball-fire_1308-33325.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-origin: content-box;
-        font-family: 'Roboto', sans-serif;
-    } */
+    .footer {
+      background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(2, 44, 126, 1) 0%,
+    rgba(192, 199, 200, 1) 0%,
+    rgba(0, 3, 171, 1) 0%,
+    rgba(0, 3, 2, 1) 100%
+  );
+    }
 </style>
 
 </head>
@@ -190,42 +198,44 @@
 
   </section>
 
-  <footer class="row mx-auto">
+  <div class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
 
 
-    <div class="footer row p-4 mx-auto jumbotron jumbo-color mt-1">
+            <div class="col-12">
+                <!-- buttons to previous and continue -->
+                <div class="row mx-auto mb-3 pt-2 p-2 rounded">
+                    <!-- <div class="col-6 col-md-4 mx-auto">
+                        <a href="../index/index.php">
+                            <button style="outline:none; border:none;"
+                                class="btn  block-f btn-danger rounded pt-1 pb-1">HOME</button></a>
+                    </div>
 
+                    <div class="col-6 col-md-4 mx-auto"><button type="submit" onclick="saveteam()"
+                            style="outline:none; border:none;" name="myteam"
+                            class="btn btn-success block rounded pt-1 pb-1">PLAY</form></button> </div> -->
 
-        <div class="col-12">
-          
-
-            <div class="row mx-auto mb-3">
-                <div class="col-12 text-center my-auto pt-2 text-responsive text-center mx-auto  "
-                    style="font-size:1.2em; font-weight:550; font-family:sans-serif  -webkit-text-stroke: 1px black;
-                    color:white ;
-                    text-shadow:
-                        3px 3px 0 blue,
-                      -1px -1px 0 red,  
-                       1px -1px 0 blue,
-                       -1px 1px 0 blue,
-                        1px 1px 0 blue"><p>BEAT THE GAME</p></div>
-
-            </div>
-
-            <div class="row mx-auto my-auto">
-                <div class="col-md-1 col-4  pb-3 mx-auto">
-                    <img class="img-responsive mx-auto img-thumbnail img-fluid rounded-circle"
-                        style="width:25vmin;" src="iste.png" alt="iste">
                 </div>
+
+
+                <div class="row mx-auto mb-3">
+                    <div class="col-12 text-center my-auto text-responsive text-center mx-auto  "
+                        style="font-size:1.2em; font-weight:550;">BEAT THE GAME</div>
+
+                </div>
+
+                <div class="row mx-auto my-auto">
+                    <div class="col-md-1 col-4  pb-3 mx-auto">
+                        <img class="img-responsive mx-auto img-thumbnail img-fluid rounded-circle" style="width:25vmin;"
+                            src="iste.png" alt="iste">
+                    </div>
+                </div>
+
+
             </div>
 
 
         </div>
-
-
     </div>
-
-</footer>
 
 
   <!--START OF JS-->
