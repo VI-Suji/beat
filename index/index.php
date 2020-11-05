@@ -195,9 +195,6 @@
        
       </div>
 
-
-  </section>
-
   <div class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
 
 
@@ -236,6 +233,8 @@
 
         </div>
     </div>
+
+  </section>
 
 
   <!--START OF JS-->
