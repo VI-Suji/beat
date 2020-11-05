@@ -128,6 +128,7 @@
       <div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
         padding: 10px;
         box-shadow: 5px 10px 0.5;">
+        <h2>5-NOV-2020</h2>
           <div class="row">
             <div class="col-4">
               <a href="../createteam/index.php">
