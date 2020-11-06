@@ -13,7 +13,7 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="temp.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -34,6 +34,16 @@
 
 
   <style>
+  body{
+      background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(2, 44, 126, 1) 0%,
+    rgba(192, 199, 200, 1) 0%,
+    rgba(0, 3, 171, 1) 0%,
+    rgba(0, 3, 2, 1) 100%
+  );
+    }
 
     @media (max-width: 1028px) {
    .background {
@@ -77,16 +87,7 @@
     padding: 10px;
   }
 }
-    body{
-      background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(2, 44, 126, 1) 0%,
-    rgba(192, 199, 200, 1) 0%,
-    rgba(0, 3, 171, 1) 0%,
-    rgba(0, 3, 2, 1) 100%
-  );
-    }
+    
     #upper-nav,.footer {
 
 
@@ -264,7 +265,14 @@
        
       </div> -->
 
-  <div class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
+  <div style="background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(2, 44, 126, 1) 0%,
+    rgba(192, 199, 200, 1) 0%,
+    rgba(0, 3, 171, 1) 0%,
+    rgba(0, 3, 2, 1) 100%
+  );" class="footer row p-0 mx-auto jumbotron jumbo-color mt-1">
 
 
             <div class="col-12">
