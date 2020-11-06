@@ -1,6 +1,6 @@
 <?php
 session_start();
-// echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
+echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
 include('../config.php');
 $email=$_SESSION['alogin'];
 $sql ="SELECT * FROM myteam WHERE useremail=:email ";
@@ -12,7 +12,7 @@ if($query->rowCount()>0){
     echo "<script type='text/javascript'>document.location = 'myteam.php';</script>";
     
 }else{
-$sql ="SELECT * FROM player";
+$sql ="SELECT * FROM player WHERE 0";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);

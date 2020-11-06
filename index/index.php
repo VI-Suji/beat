@@ -13,7 +13,7 @@
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="temp.css">
 
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -34,6 +34,49 @@
 
 
   <style>
+
+    @media (max-width: 1028px) {
+   .background {
+    /* height: 100%;
+    width: 200%;
+    z-index: 1; */
+    background-position-x: -38vh;
+    /*     background-image: url("data-original1_m4.jpg"); 
+  } */
+  .container-fluid {
+    padding: 20% 10%;
+  }
+  
+  .brand{
+    padding: 0px 70% 50px 20px;
+    font-family: "Monsteratt";
+    font-weight: bolder;
+    font-size: 40px;
+    color: yellow;
+    margin-right: auto;
+    margin-bottom: 150px;
+    background-position-x: -38vh;
+  }
+
+  .brand-txt {
+    padding: 0px 70% 50px 20px;
+    font-family: "Monsteratt";
+    font-weight: bolder;
+    font-size: 40px;
+    color: yellow;
+    margin-right: auto;
+    margin-bottom: 150px;
+    background-position-x: -38vh;
+  }
+  .logo {
+    width: 60px;
+    padding-left: 0px;
+  }
+  .welcome-txt {
+    font-size: 80%;
+    padding: 10px;
+  }
+}
     body{
       background: linear-gradient(
     90deg,
@@ -107,13 +150,15 @@
 </nav>
 
 
-  <section id="title">
+  <section class="background" id="title">
+  <!-- <h1 class='brand'>BEAT <br> THE <br>GAME</h1> -->
     <div class="container-fluid">
       <div class='row bg'>
         <div class='col-lg-6 md-3 sm-1 left'>
-          <h1 class='brand-txt'>BEAT THE GAME</h1>
+        <h1 class='brand-txt'>BEAT THE GAME</h1>
         </div>
         <div class='col-lg-6 md-3 sm-1 right'>
+          
         </div>
       </div>
     </div>

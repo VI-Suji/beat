@@ -1,6 +1,8 @@
 <?php
 session_start();
 error_reporting(0);
+// $pass=md5('Daniel');
+// echo "$pass";
 include('config.php');
 if(isset($_POST['SIGNUP'])){
   echo "<script type='text/javascript'> document.location = 'signup.php'; </script>";
