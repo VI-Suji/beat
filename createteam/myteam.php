@@ -244,7 +244,7 @@ echo "<script> let myT = ".json_encode($results)."</script>";
 
                 <div class="row">
                     <div class="col-6 mx-auto" style="color:white; font-weight:520;">My Team</div>
-                    <div class=" col-6" id="usedCredit" style="color:white; font-weight:520;"> Score: <?php echo htmlentities($_SESSION['score']); ?>
+                    <div class=" col-6" id="lat" style="color:white; font-weight:520;">
                     </div>
                 </div>
 
@@ -343,6 +343,7 @@ setMyteam(myT[0].p10,0);
 setMyteam(myT[0].p11,0);
 playersElement = document.getElementById("myTeam");
 playersElement.innerHTML = playerhtml;
+document.getElementById("lat").innerHTML= "Score: "+myT[0].tscore;
 
 function revealMessage() {
   document.getElementById("lol").style.display = "block";
