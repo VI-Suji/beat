@@ -12,7 +12,7 @@ if($query->rowCount()>0){
     echo "<script type='text/javascript'>document.location = 'myteam.php';</script>";
     
 }else{
-$sql ="SELECT * FROM player WHERE 0";
+$sql ="SELECT * FROM player";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
