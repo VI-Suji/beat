@@ -18,6 +18,7 @@ echo "<script> let myT = ".json_encode($results)."</script>";
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="iste.png" type="image/icon type">
     <!-- <script src="myteam.js"></script> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
