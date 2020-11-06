@@ -126,14 +126,26 @@
 
     <div class="row mx-auto ">
 
-<div style="background: blue;"  class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+    <div style="background: blue;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px 0.5;">
-  <h2>5-NOV-2020</h2>
+     <div class="row">
+      <div class=" row match-title dark fire  mx-auto my-auto">
+        <p class="Blazing title-text mx-auto mt-5 pb-3"><span class="mad">MATCH OVER</span>
+        <p>
+      </div>
+
+         </div>
+  </div>
+
+  <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
+  padding: 1px;
+  box-shadow: 5px 10px 0.5;">
+     <h2>6-NOV-2020</h2>
     <div class="row">
       <div class="col-4">
         <a href="../createteam/index.php">
-        <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="micapb.jpeg" alt=""></a>
+        <img class = "img-responsive img-thumbnail img-fluid rounded-circle"src="srhcapb.jpeg" alt=""></a>
       </div>
       <div class="col-4">
       <a href="../createteam/index.php">
@@ -141,24 +153,12 @@
       </div>  
 
       <div class="col-4">
-      <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="dccapb.jpeg" alt=""></div>
+      <a href="../createteam/index.php"><img class = "img-responsive img-fluid img-thumbnail rounded-circle" src="rcbcapb.jpeg" alt=""></div>
       </a></div>
   </div>
-
-  <div style="background: black;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px 0.5;">
-     <div class="row">
-      <div class=" row match-title dark fire  mx-auto my-auto">
-        <p class="Blazing title-text mx-auto mt-5 pb-3"><span class="mad">COMING SOON</span>
-        <p>
-      </div>
-
-         </div>
   </div>
-</div>
 
-      <div class="row mx-auto ">
+      <div class="row mt-2 ">
 
       <div style="background: blue;" class="col-12 col-md-6 p-4 mb-4 rounded" style=" border: 1px solid;
   padding: 10px;

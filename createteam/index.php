@@ -287,9 +287,9 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
                     <img onmouseover="glowEnter(this)" onmouseout="glowLeave(this)"
-                        class="mx-auto d-block img-responsive img-fluid rounded-circle" src="micapb.jpeg">
+                        class="mx-auto d-block img-responsive img-fluid rounded-circle" src="srhcapb.jpeg">
                     <br>
-                    <h2 class="caption" style="color:white;  ">MI</h2>
+                    <h2 class="caption" style="color:white;  ">SRH</h2>
 
 
 
@@ -310,11 +310,11 @@ echo "<script> let players = ".json_encode($results)."</script>";
                 <div class="col-4 col-md-4 item">
 
                     <img onmouseover="glowEnter(this)" onmouseout="glowLeave(this)"
-                        class="mx-auto d-block img-responsive  img-fluid rounded-circle" src="dccapb.jpeg"
+                        class="mx-auto d-block img-responsive  img-fluid rounded-circle" src="rcbcapb.jpeg"
                         id="team_img">
 
                     <br>
-                    <h2 class="caption" style="color:white; ">DC</h2>
+                    <h2 class="caption" style="color:white; ">RCB</h2>
 
                 </div>
 
