@@ -12,7 +12,7 @@ if($query->rowCount()>0){
     
 }else{
     // echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
-$sql ="SELECT * FROM player WHERE 0";
+$sql ="SELECT * FROM player";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
