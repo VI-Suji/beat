@@ -279,7 +279,6 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
                 <div class="col-12">
-                        FINAL
                 </div><br><br><br>
 
                 <div class="col-4 col-md-4 my-auto item">
