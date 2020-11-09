@@ -11,8 +11,8 @@ if($query->rowCount()>0){
     echo "<script type='text/javascript'>document.location = 'myteam.php';</script>";
     
 }else{
-    echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
-$sql ="SELECT * FROM player WHERE 0";
+    // echo "<script>alert('Time Up'); document.location = '../index/index.php'; </script>";
+$sql ="SELECT * FROM player";
 $query= $dbh -> prepare($sql);
 $query-> execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -287,9 +287,9 @@ echo "<script> let players = ".json_encode($results)."</script>";
 
 
                     <img onmouseover="glowEnter(this)" onmouseout="glowLeave(this)"
-                        class="mx-auto d-block img-responsive img-fluid rounded-circle" src="srhcapb.jpeg">
+                        class="mx-auto d-block img-responsive img-fluid rounded-circle" src="micapb.jpeg">
                     <br>
-                    <h2 class="caption" style="color:white;  ">SRH</h2>
+                    <h2 class="caption" style="color:white;  ">MI</h2>
 
 
 

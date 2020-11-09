@@ -16,18 +16,9 @@ UPDATE `dept` SET `score` = `score` +( SELECT SUM(score) FROM `myteam`, `userlog
 UPDATE `dept` SET `score` = `score` +( SELECT SUM(score) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'T%' ) WHERE `name` = 'EC';
 UPDATE `dept` SET `score` = `score` +( SELECT SUM(score) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'A%' ) WHERE `name` = 'ARCH';
 
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'R%' AND score!=0) WHERE `name`='CS'
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'H%' AND score!=0) WHERE `name`='CHEM'
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'C%' AND score!=0) WHERE `name`='CIVIL'
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'M%' AND score!=0) WHERE `name`='ME'
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'P%' AND score!=0) WHERE `name`='MECHPRO'
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'E%' AND score!=0) WHERE `name`='EEE'
-UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'T%' AND score!=0) WHERE `name`='EC'
-
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'R%' ) WHERE `name` = 'CS';
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'H%' ) WHERE `name` = 'CHEM';
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'C%' ) WHERE `name` = 'CIVIL';
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'M%' ) WHERE `name` = 'ME';
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'P%' ) WHERE `name` = 'MECHPRO';
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'E%' ) WHERE `name` = 'EEE';
-UPDATE `dept` SET `avg` = `avg`+`score` /( SELECT COUNT(*) FROM `myteam`, `userlogin` WHERE `myteam`.`useremail` = `userlogin`.`useremail` AND `userlogin`.`batch` LIKE 'T%' ) WHERE `name` = 'EC';
+UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'H%' AND `score`!=0 ) WHERE `name` = 'CHEM';
+UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'C%' AND `score`!=0 ) WHERE `name` = 'CIVIL';
+UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'M%' AND `score`!=0 ) WHERE `name` = 'ME';
+UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'P%' AND `score`!=0 ) WHERE `name` = 'MECHPRO';
+UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'E%' AND `score`!=0 ) WHERE `name` = 'EEE';
+UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'T%' AND `score`!=0 ) WHERE `name` = 'EC';
