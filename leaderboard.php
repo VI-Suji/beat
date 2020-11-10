@@ -91,13 +91,13 @@ const setPlayers = () => {
             <div class="pos" style = "font-weight:510;">
             ${cnt}
             </div>
-          <div class="name col-3 mx-auto" style = "font-weight:510;">
+          <div class="name col-10 mx-auto" style = "font-weight:510;">
         ${topper.name}
           </div>
-          <div class="name col-3 mx-auto" style = "font-weight:510;">
+          <div class="name col-1 mx-auto" style = "font-weight:510;">
         ${topper.batch}
-          </div>
-         <div class="score col-3" style = "">
+          </div>&nbsp;
+         <div class="col-2" style = "">
         <strong>${topper.score}</strong>
         </div>
             </div>

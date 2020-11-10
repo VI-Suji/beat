@@ -22,3 +22,15 @@ UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `us
 UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'P%' AND `score`!=0 ) WHERE `name` = 'MECHPRO';
 UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'E%' AND `score`!=0 ) WHERE `name` = 'EEE';
 UPDATE `dept` SET `avg` = (SELECT SUM(score)/COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'T%' AND `score`!=0 ) WHERE `name` = 'EC';
+
+UPDATE `dept` SET `score` = (SELECT SUM(score) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'C%' AND `score`!=0 ) WHERE `name` = 'CIVIL';
+UPDATE `dept` SET `score` = (SELECT SUM(score) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'M%' AND `score`!=0 ) WHERE `name` = 'ME';
+UPDATE `dept` SET `score` = (SELECT SUM(score) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'P%' AND `score`!=0 ) WHERE `name` = 'MECHPRO';
+UPDATE `dept` SET `score` = (SELECT SUM(score) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'E%' AND `score`!=0 ) WHERE `name` = 'EEE';
+UPDATE `dept` SET `score` = (SELECT SUM(score) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'T%' AND `score`!=0 ) WHERE `name` = 'EC';
+
+UPDATE `dept` SET `count` = (SELECT COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'C%' AND `score`!=0 ) WHERE `name` = 'CIVIL';
+UPDATE `dept` SET `count` = (SELECT COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'M%' AND `score`!=0 ) WHERE `name` = 'ME';
+UPDATE `dept` SET `count` = (SELECT COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'P%' AND `score`!=0 ) WHERE `name` = 'MECHPRO';
+UPDATE `dept` SET `count` = (SELECT COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'E%' AND `score`!=0 ) WHERE `name` = 'EEE';
+UPDATE `dept` SET `count` = (SELECT COUNT(*) FROM `userlogin` WHERE `userlogin`.`batch` LIKE 'T%' AND `score`!=0 ) WHERE `name` = 'EC';
